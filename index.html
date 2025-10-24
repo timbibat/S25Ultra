@@ -7,6 +7,7 @@
     <title>Galaxy S25 Ultra</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 
 <body>
@@ -206,6 +207,79 @@
             </div>
         </div>
     </div>
+
+    <div class="container text-center">
+        <h1 class="fw-bold">Meet our radiant lineup</h1>
+    </div>
+
+    <div class="container py-5 shadow-lg rounded-3 mt-3 mb-5">
+        <div class="row">
+            <div class="col-12 col-md-5 col-xl-4 d-flex justify-content-center align-items-start">
+                <div class="card p-3 shadow-sm my-2" style="width:100%;">
+                    <h4 class="fw-bold mb-4">Choose your Color:</h4>
+
+                    <div class="d-flex justify-content-start gap-2 mb-3">
+                        <button class="btn shadow-lg border-sm rounded-circle border-dark border-1"
+                            onclick="switchModel('Titanium Whitesilver.glb')"
+                            style="background-color:#BFCFDC; width: 30px; height: 30px;"></button>
+                        <button class="btn shadow-lg border-sm rounded-circle border-dark border-1"
+                            onclick="switchModel('Titanium Black.glb')"
+                            style="background-color:#2A2A2C; width: 30px; height: 30px;"></button>
+                        <button class="btn shadow-lg border-sm rounded-circle border-dark border-1"
+                            onclick="switchModel('Titanium Gray.glb')"
+                            style="background-color:#C7C2BC; width: 30px; height: 30px;"></button>
+                        <button class="btn shadow-lg border-sm rounded-circle border-dark border-1"
+                            onclick="switchModel('Titanium Whitesilver.glb')"
+                            style="background-color:#F2F4F5; width: 30px; height: 30px;"></button>
+                        <button class="btn shadow-lg border-sm rounded-circle border-dark border-1"
+                            onclick="switchModel('Titanium Jetblack.glb')"
+                            style="background-color:#0B0B0B; width: 30px; height: 30px;"></button>
+                        <button class="btn shadow-lg border-sm rounded-circle border-dark border-1"
+                            onclick="switchModel('Titanium Jadegreen.glb')"
+                            style="background-color:#C5D3C7; width: 30px; height: 30px;"></button>
+                        <button class="btn shadow-lg border-sm rounded-circle border-dark border-1"
+                            onclick="switchModel('Titanium Pinkgold.glb')"
+                            style="background-color:#EDD6C9; width: 30px; height: 30px;"></button>
+                    </div>
+
+                    <div>
+                        <div class="card border-0 shadow-sm p-3 mb-4 mt-2">
+                            <h5 class="fw-bold mb-3">Key Highlights</h5>
+                            <ul class="list-unstyled text-start mb-0">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Snapdragon 8
+                                    Elite
+                                </li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>200MP Quad
+                                    Camera</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Titanium
+                                    Design</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>All-Day
+                                    Battery</li>
+                            </ul>
+                        </div>
+
+                        <a href="https://www.samsung.com/ph/smartphones/galaxy-s25-ultra/buy/"
+                            class="btn btn-dark btn-lg px-4 py-2 rounded-pill text-white">
+                            <i class="bi bi-cart-fill me-2"></i>Buy Now Starting at ₱72,241.50
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-7 col-xl-8 d-flex justify-content-center align-items-center">
+                <div class="card p-3 shadow-sm my-2 w-100">
+                    <model-viewer id="modelViewer" src="assets/Titanium Whitesilver.glb" alt="3D model of device"
+                        camera-controls auto-rotate ar ar-modes="webxr scene-viewer quick-look" shadow-intensity="1"
+                        exposure="1" poster="assets/model-poster.png" loading="lazy"
+                        style="width:100%; height:clamp(320px,50vh,700px); display:block; border-radius:12px; background:#fff;">
+                    </model-viewer>
+                    <div class="small text-muted mt-2">Tip: Click and drag to rotate. Use the color dots to switch
+                        variants.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Gallery Features Section -->
     <div class="container my-5">
         <h1 class="text-center">Gallery</h1>
@@ -230,6 +304,14 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function switchModel(modelFile) {
+            const modelViewer = document.getElementById("modelViewer");
+            modelViewer.src = `assets/${modelFile}`;
+        }
+    </script>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
