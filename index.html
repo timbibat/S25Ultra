@@ -35,14 +35,18 @@
         </div>
     </nav>
 
-    <div class="container-fluid p-0 position-relative">
+    <div class="container-fluid p-0 position-relative" style="min-height: 100vh;">
         <img src="https://images.samsung.com/ph/smartphones/galaxy-s25-ultra/images/galaxy-s25-ultra-features-kv.jpg?imbypass=true"
-            class="img-fluid w-100 min-vh-100 object-fit-cover" alt="Galaxy S25 Ultra">
-        <div class="position-absolute bottom-0 start-0 p-4 text-lg-start text-center w-100">
-            <div class="text-white ms-5 mb-5">
-                <h1 class="fw-bold">Galaxy S25 Ultra</h1>
-                <p class="mb-3">Galaxy AI ✨</p>
-                <button class="btn btn-outline-light btn-lg">Buy now</button>
+            class="img-fluid w-100 h-100 position-absolute top-0 start-0" style="object-fit: cover; z-index: 1;"
+            alt="Galaxy S25 Ultra">
+        <div class="position-absolute w-100 h-100 d-flex align-items-end justify-content-center justify-content-lg-start"
+            style="z-index: 2; padding: 2rem; padding-bottom: 8vh;">
+            <div class="text-white text-center text-lg-start mb-4 mb-lg-5">
+                <h1 class="fw-bold display-3 mb-3" style="text-shadow: 0 4px 12px rgba(0,0,0,0.7);">Galaxy S25 Ultra
+                </h1>
+                <p class="fs-4 mb-4" style="text-shadow: 0 2px 8px rgba(0,0,0,0.6);">Galaxy AI ✨</p>
+                <button class="btn btn-outline-light btn-lg px-4 py-3 fw-semibold"
+                    style="border-width: 2px; backdrop-filter: blur(4px);">Buy now</button>
             </div>
         </div>
     </div>
